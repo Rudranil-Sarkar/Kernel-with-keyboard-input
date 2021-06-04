@@ -1,0 +1,20 @@
+Vga memory address 0xb8000
+
+The screen is 80x25
+
+each cell is 16bit and the first bit(before the char) is used for color and it is divided into two equal size high bits for background color and the next low bits is for the foreground color so the it should look BBBBFFFFCCCC where 'B' is background color 'F' is for foreground color and 'C' is the actual character. The vga mode provides 16 colors from 0 to 15(BLACK - WHITE).
+
+Things needs to done for actual input receiving:
+
+- impliment the gdt structure
+- setup the ports
+- set up the idt
+- write driver code for the keyboard
+
+
+
+idt
+Find the solution: how to call a class method from the assembly cuz extern is not working.....
+	found solution 'nm the c++ object file and copy the address and declare that as the extern in the assembly'
+	
+Find the bug that keep crashing the virtual machine
